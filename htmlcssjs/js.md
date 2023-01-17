@@ -7,7 +7,7 @@ The js standard is known as ECMAScript (current: ES2022)
 ES2015 ES6
 
 ## Javascript Types
-- Dynamic, Weak Typing
+[Dynamic, Weak Typing]
 - String
 - Undefined
 - Number
