@@ -1,0 +1,58 @@
+.pgtitle {
+    padding: 10px 40px;
+}
+nav ul {
+    border: solid;
+    border-color: green;
+    border-width: 5px 0 5px 0;
+    background-color: rgb(221, 221, 221);
+}
+nav ul li {
+    display: inline;
+    padding: 0 10px 0 0;
+}
+.appcontainer {
+    padding: 10px 40px;
+}
+#main-buttons {
+    padding: 10px 0;
+}
+#mycalculator {
+    font-family: Courier New, monospace;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 298px;
+}
+#calc-buttons {
+    width: 300px;
+}
+#calc-io {
+  width: 80%;
+  font-size: 2rem;
+  height: 80px;
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  text-align: right;
+  padding-right: 10.5%;
+  padding-left: 10%;
+}
+.button {
+    font-family: Courier New, monospace;
+    padding: 0;
+    margin: 1%;
+    height: 80px;
+    width: 29%;
+}
+.bigbutton {
+    font-family: Courier New, monospace;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    width: 48.35%;
+}

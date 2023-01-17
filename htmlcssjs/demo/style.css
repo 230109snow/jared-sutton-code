@@ -1,0 +1,15 @@
+/*
+Selects all elements with a "heading" class attribute, and applies style:
+*/
+.heading {
+    font-style: italic;
+}
+p {
+    color: green;
+}
+h3 {
+    color: grey;
+}
+#second-ol-item {
+    color: purple;
+}

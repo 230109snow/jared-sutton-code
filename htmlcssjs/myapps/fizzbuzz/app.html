@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared's App: FizzBuzz</title>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+<body>
+    <div>
+        <h1 class="pgtitle">FizzBuzz</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../counter/app.html">Counter</a>
+                </li>
+                <li>
+                    <a href="#">FizzBuzz</a>
+                </li>
+                <li>
+                    <a href="../calculator/app.html">Calculator</a>
+                </li>
+                <li>
+                    <a href="../hangman/app.html">Hang Man</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="appcontainer">
+
+        <form onsubmit="fizzbuzz(event); return false;">
+            <input type="number" max="100" min="1" name="fizzbuzz-input" id="fizzbuzz-in">
+            <input type="submit" value="FizzBuzz!">
+        </form>
+        <!-- onsubmit val is called for the form and any elements its nested within (eg appcontainer in this case) this is 'event bubbling'-->
+
+        <br>
+        
+        <div id="fizzbuzz-output">
+            <p id="fizzbuzz-result"></p>
+        </div>
+
+        <!-- Non-form method to make fizzbuzz button:
+
+        <div id="fizzbuzz-input">
+            <h2>Choose a positive integer:</h2>
+            <input type="number" max="100" min="1" name="fizzbuzz-input" id="fizzbuzz-in">
+            <button onclick="fizzbuzz()">Fizzbuzz!</button>
+        </div> -->
+        <!-- the `; return false;` prevents page refresh on form submit: -->
+    </div>
+
+    <script src="events.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared's App: Counter</title>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+<body>
+    <div>
+        <h1 class="pgtitle">Counter</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Counter</a>
+                </li>
+                <li>
+                    <a href="../fizzbuzz/app.html">FizzBuzz</a>
+                </li>
+                <li>
+                    <a href="../calculator/app.html">Calculator</a>
+                </li>
+                <li>
+                    <a href="../hangman/app.html">Hang Man</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="appcontainer">
+        <div id="counter-val">0</div>
+        <div id="main-buttons">
+            <button onclick="shiftval(1)">Increment</button>
+            <button onclick="shiftval(-1)">Decrement</button>
+            <button onclick="scaleval(0)">Reset</button>
+        </div>
+        <button onclick="scaleval(2)">Double</button>
+    </div>
+
+    <script src="events.js"></script>
+</body>
+</html>

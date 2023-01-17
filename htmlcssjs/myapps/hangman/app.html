@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared's App: HangMan</title>
+    <link rel="stylesheet" href="../mystyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1 class="pgtitle">Hang Man</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../counter/app.html">Counter</a>
+                </li>
+                <li>
+                    <a href="../fizzbuzz/app.html">FizzBuzz</a>
+                </li>
+                <li>
+                    <a href="../calculator/app.html">Calculator</a>
+                </li>
+                <li>
+                    <a href="#">Hang Man</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="myhangman">
+
+        <div id="hangman-gamestate">
+            <!--TODO this part needs a lot of work. First: make guessing progress visible and make the secret word initially invisible-->
+            <div id="hangman-guesses" class="hangman-subsec gamestate" style="width: 45%; float: left;">
+                <div style="display: flex">
+                    Guesses:<div id="guess-counter">0</div>|Lives:<div id="current-num-lives"></div>
+                </div>
+                <div id="current-guessed-letters"></div>
+            </div>
+
+            <div id="hangman-figure" class="hangman-subsec gamestate" style="margin-left: 55%; width: 45%;">
+                <!--NOTE The question mark is necessary so it doesn't immediately trigger a win, as it does if the word starts empty -->
+                <div id="current-secret-word">?</div>
+                <!--TODO Can use a canvas to iterate hangman? -->
+            </div>
+            
+        </div>
+
+        <div id="hangman-buttons" class="hangman-subsec button-grid">
+            <button onclick="guessletter('A')" class="small-button" id="lett-A">A</button>
+            <button onclick="guessletter('E')" class="small-button" id="lett-E">E</button>
+            <button onclick="guessletter('I')" class="small-button" id="lett-I">I</button>
+            <button onclick="guessletter('O')" class="small-button" id="lett-O">O</button>
+            <button onclick="guessletter('U')" class="small-button" id="lett-U">U</button>
+            <button onclick="guessletter('Y')" class="small-button" id="lett-Y">Y</button>
+
+            <button onclick="guessletter('B')" class="small-button" id="lett-B">B</button>
+            <button onclick="guessletter('C')" class="small-button" id="lett-C">C</button>
+            <button onclick="guessletter('D')" class="small-button" id="lett-D">D</button>
+            <button onclick="guessletter('F')" class="small-button" id="lett-F">F</button>
+            <button onclick="guessletter('G')" class="small-button" id="lett-G">G</button>
+
+            <button onclick="guessletter('H')" class="small-button" id="lett-H">H</button>
+            <button onclick="guessletter('J')" class="small-button" id="lett-J">J</button>
+            <button onclick="guessletter('K')" class="small-button" id="lett-K">K</button>
+            <button onclick="guessletter('L')" class="small-button" id="lett-L">L</button>
+            <button onclick="guessletter('M')" class="small-button" id="lett-M">M</button>
+
+            <button onclick="guessletter('N')" class="small-button" id="lett-N">N</button>
+            <button onclick="guessletter('P')" class="small-button" id="lett-P">P</button>
+            <button onclick="guessletter('Q')" class="small-button" id="lett-Q">Q</button>
+            <button onclick="guessletter('R')" class="small-button" id="lett-R">R</button>
+            <button onclick="guessletter('S')" class="small-button" id="lett-S">S</button>
+
+            <button onclick="guessletter('T')" class="small-button" id="lett-T">T</button>
+            <button onclick="guessletter('V')" class="small-button" id="lett-V">V</button>
+            <button onclick="guessletter('W')" class="small-button" id="lett-W">W</button>
+            <button onclick="guessletter('X')" class="small-button" id="lett-X">X</button>
+            <button onclick="guessletter('Z')" class="small-button" id="lett-Z">Z</button>
+
+            <button onclick="setNewWord(); request_new_game()" id="reset-game-button" style="word-wrap: auto">NEW GAME</button>
+        </div>
+    </div>
+
+    <form onsubmit="setNewWord(); return false;">
+        Max Word Length=
+        <input type="number" min="3" max="25" name="maxlengthofwords" id="max-word-length" value="5">
+        <input type="submit" value="Get Word">
+    </form>
+
+    <div>
+        <p id="did-i-win" hidden style="font-size: 30px">YOU WIN!!!! CONGRATS!</p>
+    </div>
+
+
+    <script src="events.js"></script>
+    <script src="fetchword.js"></script>
+</body>
+</html>

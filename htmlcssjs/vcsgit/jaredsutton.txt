@@ -1,0 +1,3 @@
+My name is Jared Sutton, I have bachelor's degrees in physics and mathematics, and I'm an aspiring software engineer. 
+Personally, im particularly interested in ML and AI, as well as exploring both their viable technical use cases, as well as, more broadly, their potential sociopolitical/socioeconomic implications. 
+Ultimately, I would like to help develop methods for communicating relevant information about ML/AI to laypersons so that they can make more informed, and less biased decisions about such technology.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- holds metadata about webpage -->
+
+    <!-- Style tags, each w/ a set of 'rules': -->
+    <style>
+        h2 {
+            color: red;
+        }
+        p {
+            color: orange;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="color: hotpink">
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="fetch.html">Fetch</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- holds content of webpage -->
+    <h1 class="heading main-heading">Hello World!</h1>
+    <p>This is a paragraph. Style tag sets this to orange, but then the linked stylesheet sets this to green. Therefore, this should be green.</p>
+    <ul>
+        <!-- Syle attribute: -->
+        <li style="color: blue">A blue list item</li>
+        <li>Another list item</li>
+    </ul>
+    <h2>A h2 heading (heading sets this to red)</h2>
+    <h3>Since applying to h3 is more specific than applying to all body elements, the more specific styling (set to grey in stylesheet) is applied over the broader one (set to hot pink)</h3>
+    <ol>
+        <li>This is the first item</li>
+        <li id="second-ol-item">This is the second (colored purple by specifying id tag in stylesheet)</li>
+    </ol>
+    <h1 class="heading" id="cat-pic-heading">Here's a cat picture:</h1>
+    <img src="https://c.neevacdn.net/image/fetch/s--eLj5adLv--/https%3A//www.bubblypet.com/wp-content/uploads/2021/02/Munchkin-cat-lying-on-a-bed.jpg?savepath=Munchkin-cat-lying-on-a-bed.jpg" width="200px" alt="">
+    <script>
+        console.log("this is printed from index.html");
+    </script>
+    <script src="index.js"></script>
+
+</body>
+</html>
