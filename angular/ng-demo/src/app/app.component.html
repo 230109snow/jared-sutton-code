@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<h1>App works</h1>
+<app-test></app-test>
+<!-- Directives -->
+<div *ngIf="show">
+    <div *ngFor="let i of data">
+        <!-- String interpolation: {{var name}} -->
+        {{i}}
+    </div>
+</div>
+<button (click)="toggleClick()">Show/Hide</button>
