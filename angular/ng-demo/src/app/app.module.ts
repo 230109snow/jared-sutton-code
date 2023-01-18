@@ -5,23 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TwoComponent } from './two/two.component';
-import { FooComponent } from './two/foo/foo.component';
+import { TwoModule } from './two/two.module'
+import { FetchCatsComponent } from './fetch-cats/fetch-cats.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
+    FetchCatsComponent,
     NavbarComponent,
-    TwoComponent,
-    FooComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  exports: [
-    FooComponent
+    AppRoutingModule,
+    TwoModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

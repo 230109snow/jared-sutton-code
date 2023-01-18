@@ -1,0 +1,11 @@
+<!-- example of a template form and two way binding using the 'banana box' -->
+<input type="number" [(ngModel)]="numCats">
+<button (click)="getCats()">Get Cats</button>
+<!-- Example of pipes, used to format data display -->
+<!-- {{catpics | json}}
+<br>
+{{now | date: 'long'}} -->
+<div *ngFor="let pic of catpics">
+    <!-- example of property binding (binding to class properties) -->
+    <img [src]="pic.url" width="100%" alt="">
+</div>
